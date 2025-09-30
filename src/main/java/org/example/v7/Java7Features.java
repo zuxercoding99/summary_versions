@@ -24,16 +24,21 @@ public class Java7Features {
 
     // ---------- 2. Switch con String ----------
     static void ejemploSwitchString(String color) {
+        // 🔹 La variable se declara y asigna ANTES
         switch (color) {
             case "rojo":
                 System.out.println("Parar");
+                System.out.println("Luz intensa");
                 break;
+
             case "verde":
                 System.out.println("Avanzar");
+                System.out.println("Cuidado con peatones");
                 break;
+
             case "amarillo":
                 System.out.println("Precaución");
-                break;
+                // sin break → continúa en el siguiente (fall-through)
             default:
                 System.out.println("Color no reconocido");
         }
